@@ -1,5 +1,7 @@
 # lista_programacao_avancada
 
+//questao 12
+
 #include <stdio.h>
 
 int main(void) {

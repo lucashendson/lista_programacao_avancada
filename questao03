@@ -1,0 +1,7 @@
+# lista_programacao_avancada >> README.md
+
+questao 03
+as expressoes de atribuicoes ilegais sao:
+p = i;
+i = (*&)j;
+q = *p;

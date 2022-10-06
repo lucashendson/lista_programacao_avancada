@@ -1,0 +1,33 @@
+# lista_programacao_avancada >> README.md
+
+//questao01
+#include <stdio.h>
+
+int main(void) {
+  //declaracao das variaveis necessarias para realizar o codigo
+  int i=3, j=5;
+  int *p, *q;
+  int a, b, c, d; //declarei variaveis para realizar as operacoes e assim me organizar mais
+  p = &i;
+  q = &j;
+
+  //realizacao das operacoes//
+
+  a = (p == &i);
+  printf("\np == &i  = %d\n", a);
+  b = (*p - *q);
+  printf("\n*p - *q = %d\n", b);
+  c = **&p;
+  printf("\n**&p = %d\n", c);
+  d = 3 - (*p/(*q)) + 7;
+  printf("\n3 - (*p/(*q)) + 7 = %d\n", d);
+
+  //resultados das operacoes---------------------------
+  //p == &i  = 1
+  //*p - *q = -2
+  //**&p = 3
+  //3 - (*p/(*q)) + 7 = 10
+  //----------------------------------------------------
+  
+  return 0;
+}

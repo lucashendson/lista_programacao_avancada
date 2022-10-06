@@ -1,0 +1,14 @@
+# lista_programacao_avancada
+
+//questao 11
+
+expressoes validas:
+aloha[2] = value;
+scanf("%f", &aloha);
+printf("%f", aloha);
+coisas[4][4] = aloha[3];
+pf = aloha;
+
+expressoes invalidas:
+coisas[5] = aloha;
+pf = value;

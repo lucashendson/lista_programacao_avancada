@@ -1,0 +1,29 @@
+# lista_programacao_avancada
+
+//questao 07
+#include <stdio.h>
+
+int main(void) { //declaracao de variaveis usadas no programa//
+int mat[4] = {1, 2, 3, 4};
+int *p;
+int x;
+int a, b, c, d;
+  
+a = (p = mat + 1);
+//b = (p = mat++);// nao e valida
+//c = (p = ++mat); //nao e valida
+d = (x = (*mat)++);
+
+printf("%d\n", a); 
+printf("%d\n", b); //essa operacao nao e valida
+printf("%d\n", c); //essa operacao nao e valida
+printf("%d\n", d); 
+
+  return 0;
+}
+//as expressoes validas sao
+p = mat + 1 //justificativa: o ponteiro esta recebendo a segunda posicao do vetor
+x = (*mat)++; //justificativa: essa expressao pega o valor do endereco do primeiro valor do vetor e soma com o valor guardado nessa posicao
+//expressoes invalidas
+p = mat++; //a construcao da expressao esta errada e assim contem um erro na sintaxe da linguagem
+p = ++mat; //a construcao da expressao esta errada e assim contem um erro na sintaxe da linguagem

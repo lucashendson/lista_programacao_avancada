@@ -1,0 +1,30 @@
+# lista_programacao_avancada
+
+//questao06
+#include <stdio.h>
+
+int main() { //declaracao das variaveis usadas//
+  int pulo[5] = {0 ,1, 2, 3, 4, 5};  //valores que eu assumi para o vetor//
+  int i;
+  int a, b, c, d;
+
+  //quando eu colocava as operacoes diretamente no printf mostrava um erro, entao por isso declarei variaveis para cada operacao//----------------------------------------------
+  a = (*(pulo+2)); //expressao que referencia o terceiro elemento do vetor
+  b = (*(pulo+4));
+  c = (pulo + 4);
+  d = (pulo + 2);
+//---------------------------------------------
+  for(i = 0; i <= 4; i++){
+  printf("%d\n", a);
+  printf("%d\n", b);
+  printf("%d\n", c);
+  printf("%d\n", d);
+  return 0;
+}
+}
+//esses foram os resultados obtidos
+2
+4
+1306831312
+1306831304
+//com isso chego a conclusao que a unica expressao que referencia o terceiro elemento do vetor e *(pulo+2)//

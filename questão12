@@ -1,0 +1,22 @@
+# lista_programacao_avancada
+
+#include <stdio.h>
+
+int main(void) {
+
+int *px, x;
+  px=&x;
+  printf("insira um valor para x \n");
+  scanf("%d",&x);
+  printf("valor armazenado no ponteiro de x = %d \n", *px);
+  
+  //impressão do endereço de x através de ponteiros//
+ printf("endereço do ponteiro de x = %p \n", px);
+  return 0;
+}
+// Resposta (resultado compilado para um número inteiro, neste caso foi atribuido o número 4):
+
+insira um valor para x 
+4
+valor armazenado no ponteiro de x = 4 
+endereço do ponteiro de x = 0x7fffcd3391b4

@@ -1,0 +1,55 @@
+# lucashendson_isabeldandara_listaprogramacaoavancada
+
+#include <stdio.h>
+
+int main(void) {
+int vx[4], *px, i;
+  char vy[4], *py;
+  float vz[4], *pz;
+  double vd[4], *pd;
+
+  px=&vx;
+  py=&vy;
+  pz=&vz;
+  pd=&vd;
+  
+ for(i=0;i<3;i++){
+  printf("endereço do ponteiro de x = %X\n", px+i);
+   printf("\n");
+  printf("endereço do ponteiro de y = %X\n", py+i);
+   printf("\n");
+  printf("endereço do ponteiro de z = %X\n", pz+i);
+   printf("\n");
+   printf("endereço do ponteiro de d = %X \n\n", pd+i);
+ }
+  
+  return 0;
+}
+
+//depois de executar o código e comparar com as respostas da questão anterior(9), é possivel perceber 
+que os valores do endereço variam de acordo com o tamanho do seu tipo(int, char, float, double).
+
+Resultados:
+endereço do ponteiro de x = F661700
+
+endereço do ponteiro de y = F6616FC
+
+endereço do ponteiro de z = F6616E0
+
+endereço do ponteiro de d = F6616C0 
+
+endereço do ponteiro de x = F661704
+
+endereço do ponteiro de y = F6616FD
+
+endereço do ponteiro de z = F6616E4
+
+endereço do ponteiro de d = F6616C8 
+
+endereço do ponteiro de x = F661708
+
+endereço do ponteiro de y = F6616FE
+
+endereço do ponteiro de z = F6616E8
+
+endereço do ponteiro de d = F6616D0 

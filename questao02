@@ -1,0 +1,31 @@
+# lista_programacao_avancada >> README.md
+
+//questao 02
+#include <stdio.h>
+
+int main(void) {
+  int i=5, *p;
+//variaveis auxiliares que ajudarm na organizacao das operacoes//
+  int a, b, c, d;
+//supondo que i ocupa o endereco 4094 na memoria//------------------------
+  
+  p = &i;
+  printf("\n%x\n", p);
+  a = *p+2;
+  printf("\n%d\n", a);
+  b = **&p;
+  printf("\n%d\n", b);
+  c = 3**p;
+  printf("\n%d\n", c);
+  d = **&p+4;
+  printf("\n%d", d);
+
+  //resultados obtidos-----------------------------------
+  //9f49f244
+  //7
+  //5
+  //15
+  //9
+  
+  return 0;
+}

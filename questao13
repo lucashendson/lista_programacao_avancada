@@ -1,0 +1,69 @@
+# lucashendson_isabeldandara_listaprogramacaoavancada
+
+//questao 13
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void ord(float *num, int n){ //funcao de ordenacao
+  int i, j;
+  float t; //variavel temporaria
+  
+  for(i = 0; i < n; i++){
+  for(j = 0; j < n; j++){
+  if(i == 0){
+  if(num[i] > num[j]){
+    t = num[j];
+    num[j] = num[i];
+    num[i] = t;
+}
+}
+  else{
+    if((num[i] < num[j]) && (num[i] < num[i-1])){
+    t = num[j];
+    num[j] = num[i];
+    num[i] = t;
+}
+}
+}
+}
+}
+int main(){
+  float *num, t, x;
+  int a, b, n, i, j;
+  
+printf("Informe quantos numeros voce quer colocar em ordem crescente: ");
+scanf("%d", &n);
+
+//alocacao dinamica
+  
+  num = (float*)malloc(n*sizeof(float));
+
+//geracao de numeros em ordem aleatoria//  
+  
+  for(i = 0; i < n; i++){
+    a = rand()%100;
+    b = rand()%100;
+    x = ((float)a/b);
+    
+    num[i] = x;
+  }
+
+  printf("\nnumeros em ordem aleatoria: \n");
+  for(i = 0; i < n; i++){
+    printf("%.2f", num[i]);
+    printf("\n");
+  }
+
+ord(num, n);
+
+printf("\nnumeros em ordem crescente: \n");
+for(i = 0; i < n; i++){
+  printf("%.2f", num[i]);
+  printf("\n");
+}
+
+free(num); //liberacao de memoria
+
+return 0;
+}

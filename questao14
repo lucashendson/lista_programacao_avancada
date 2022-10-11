@@ -1,0 +1,80 @@
+# lucashendson_isabeldandara_listaprogramacaoavancada
+
+#include <stdio.h>
+#include <stdlib.h>
+//função para comparação 
+int comparar(const void *p, const void *q){
+  if(*(float*)p == *(float*)q)
+    return 0;
+  else
+    if(*(float*)p < *(float*)q)
+      return -1;
+  else
+      return 1;
+  }
+/*
+função de ordenação da questão anterior:
+void ord(float *num, int n){ //funcao de ordenacao
+  int i, j;
+  float t; //variavel temporaria
+
+  for(i = 0; i < n; i++){
+  for(j = 0; j < n; j++){
+  if(i == 0){
+  if(num[i] > num[j]){
+    t = num[j];
+    num[j] = num[i];
+    num[i] = t;
+}
+}
+  else{
+    if((num[i] < num[j]) && (num[i] < num[i-1])){
+    t = num[j];
+    num[j] = num[i];
+    num[i] = t;
+}}}}}
+*/
+
+//declaração de variaveis, uso da função qsort e realização da alocação dinâmica dos valores inseridos
+int main(){
+  float *num, temp, x;
+  int y, z, n, i, j;
+  
+printf("valores atribuidos: ");
+scanf("%d", &n);
+
+  num = (float*)malloc(n*sizeof(float));
+
+  if(num) printf("\nalocação realizada\n");
+  else printf("\nerro!\n");
+
+  srand(time(NULL));
+  
+  for(i = 0; i < n; i++){
+    y = rand()%1000;
+    z = rand()%1000;
+    x = ((float)y/z);
+    
+    num[i] = x;
+  }
+
+  printf("\nnúmeros registrados: \n");
+  for(i = 0; i < n; i++){
+    printf("%.2f", num[i]);
+    printf("||");
+  }
+
+qsort(num,n,sizeof(float),comparar);
+  
+printf("\n");
+
+printf("\nresultado da ordenação: \n");
+for(i = 0; i < n; i++){
+  printf("%.2f", num[i]);
+  printf("||");
+}
+
+free(num);
+
+return 0;
+}
